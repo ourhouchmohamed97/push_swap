@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 21:13:14 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/01/31 21:27:04 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/03 10:26:29 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ void	delete_content(int content)
 
 void	handle_error(t_list **lst_tab)
 {
-	ft_lstclear(lst_tab, &delete_content);
+	ft_lstclear(lst_tab, delete_content);
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 
-void	find_disturb(char *arg,  t_list **lst_tab)
+void	arg_is_valid(char *arg,  t_list **lst_tab)
 {
 	int	i;
 
