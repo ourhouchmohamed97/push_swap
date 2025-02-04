@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves_s.c                                          :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:53:59 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/04 12:19:50 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/04 12:28:36 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sa(t_stack *stack_a)
 {
@@ -33,7 +33,7 @@ void	sb(t_stack *stack_b)
 	stack_b->tab[1] = tmp;
 	ft_printf("sb\n");
 }
-void	sa_without_print(t_stack *stack_a)
+void	sa_silent(t_stack *stack_a)
 {
 	int	tmp;
 	if (stack_a->len < 2)
@@ -43,7 +43,7 @@ void	sa_without_print(t_stack *stack_a)
 	stack_a->tab[1] = tmp;
 }
 
-void	sb_without_print(t_stack *stack_b)
+void	sb_silent(t_stack *stack_b)
 {
 	int	tmp;
 	if (stack_b->len < 2)
@@ -55,7 +55,7 @@ void	sb_without_print(t_stack *stack_b)
 
 void	ss(t_stack *stack_a, t_stack *stack_b)
 {
-	sa_without_print(stack_a);
-	sb_without_print(stack_b);
+	sa_silent(stack_a);
+	sb_silent(stack_b);
 	ft_printf("ss\n");
 }

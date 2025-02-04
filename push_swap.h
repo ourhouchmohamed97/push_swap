@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:09:25 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/04 11:57:02 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/04 16:11:56 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,18 @@ int						check_rev_sort(t_stack *stack_a);
 void					sa(t_stack *stack_a);
 void					sb(t_stack *stack_b);
 void					ss(t_stack *stack_a, t_stack *stack_b);
+void					pa(t_stack *stack_a, t_stack *stack_b);
+void					pb(t_stack *stack_a, t_stack *stack_b);
+void					ra(t_stack *stack_a);
+void					rb(t_stack *stack_b);
+void					rr(t_stack *stack_a, t_stack *stack_b);
+
+
+
+// ************************** MOVES SILENT **************************
+void					sa_silent(t_stack *stack_a);
+void					sb_silent(t_stack *stack_b);
+void					ra_silent(t_stack *stack_a);
+void					rb_silent(t_stack *stack_b);
 
 #endif
