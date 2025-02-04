@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 20:39:24 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/03 10:27:02 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/03 13:15:46 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ void	add_arg(t_list **lst_tab, char *arg)
 	else
 	{
 		result = ft_atoi(arg);
-		if ((result == 2147483648) || find_dubble(*lst_tab, result))
+		if (result == 2147483648 || find_dubble(*lst_tab, result))
 			handle_error(lst_tab);
-		node = ft_lstnew((int *)result);
+		node = ft_lstnew((int)result);
 		if (!node)
 			handle_error(lst_tab);
 		ft_lstadd_back(lst_tab, node);
@@ -82,7 +82,7 @@ t_stack	*copy_lst_to_tab(t_list **lst_tab, t_stack *result)
 	result->len = len_tab;
 	return (result);
 }
-#include <stdio.h>
+
 t_stack	*ft_parse(int argc, char **argv)
 {
 	t_list	*lst_tab;

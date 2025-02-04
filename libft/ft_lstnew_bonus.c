@@ -6,13 +6,13 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:01:43 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/11/14 17:08:39 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:55:56 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*new_node;
 

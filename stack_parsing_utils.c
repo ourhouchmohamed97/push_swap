@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 21:13:14 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/03 10:26:29 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/03 14:48:45 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	arg_is_valid(char *arg,  t_list **lst_tab)
 	i = 0;
 	while (arg[i])
 	{
-		if ((arg[i] >= '0' && arg[i] <= '9') || arg[i] == ' ' || arg[i] == '+'
-			|| arg[i] == '-')
+		if ((arg[i] >= '0' && arg[i] <= '9') || arg[i] == ' ' || (arg[i] == '+' && (arg[i + 1] >= '0' && arg[i + 1] <= '9'))
+			|| (arg[i] == '-' && (arg[i + 1] >= '0' && arg[i + 1] <= '9')))
 			i++;
 		else
 			handle_error(lst_tab);

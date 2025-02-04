@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:15:30 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/02 17:08:15 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/03 13:00:51 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(int))
 {
-	t_list	*tmp;
+	t_list	*current;
+	t_list	*next_node;
 
-	if (lst && *lst && del)
+	if (!lst || !del)
+		return ;
+	current = *lst;
+	while (current)
 	{
-		while (*lst)
-		{
-			tmp = (*lst)->next;
-			ft_lstdelone(*lst, del);
-			*lst = tmp;
-		}
-		free (*lst);
-		*lst = NULL;
+		next_node = current->next;
+		del(current->content);
+		free(current);
+		current = next_node;
 	}
+	*lst = NULL;
 }
