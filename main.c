@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:21:51 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/04 13:11:41 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/05 19:17:11 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,12 @@ int main(int argc, char *argv[])
         return (0);
     stack_a = ft_parse(argc, argv);
     init_stack_b(stack_a, &stack_b);
-    stack_b->tab[0] = 5;
-    stack_b->tab[1] = 1;
-    stack_b->tab[2] = 3;
-    stack_b->len = 3;
-    pa(stack_a, stack_b);
-    // sa(stack_a);
-    ft_printf("stack a\n");
-    int i = 0;
-    while (i < stack_a->len)
-    {
-        ft_printf("%d \n", stack_a->tab[i]);
-        i++;
-    }
-    ft_printf("stack b\n");
-    i = 0;
-    while (i < stack_b->len)
-    {
-        ft_printf("%d \n", stack_b->tab[i]);
-        i++;
-    }
+    if (stack_a->len == 2)
+        sort_two(stack_a);
+    else if (stack_a->len == 3)
+        sort_three(stack_a);
+    else if (stack_a->len == 4)
+        sort_four(stack_a, stack_b);
 	// free_stack(stack_a, stack_b);
     return (0);
 }
