@@ -6,12 +6,11 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 20:39:24 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/03 13:15:46 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:03:47 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft/libft.h"
+#include "../../include/push_swap.h"
 
 void	parse_string(t_list **lst_tab, char *arg)
 {

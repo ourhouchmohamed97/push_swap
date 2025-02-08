@@ -6,11 +6,11 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:53:59 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/04 12:28:36 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:03:18 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../include/push_swap.h"
 
 void	sa(t_stack *stack_a)
 {

@@ -6,14 +6,11 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:21:51 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/07 19:30:51 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:04:38 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "libft/libft.h"
-#include <stdio.h>
-
+#include "../include/push_swap.h"
 
 int main(int argc, char *argv[])
 {

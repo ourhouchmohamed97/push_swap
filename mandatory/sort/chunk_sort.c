@@ -6,11 +6,11 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:59:15 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/08 10:18:03 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:04:07 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
