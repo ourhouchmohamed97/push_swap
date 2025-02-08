@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 08:00:58 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/11/08 19:29:36 by mourhouc         ###   ########.fr       */
+/*   Created: 2024/11/21 12:40:34 by mourhouc          #+#    #+#             */
+/*   Updated: 2024/11/25 17:07:14 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_putstr(char *s, int *counter)
 {
-	size_t	srcsize;
-
-	srcsize = ft_strlen(src);
-	if (dstsize > srcsize + 1)
-		ft_memcpy(dst, src, srcsize + 1);
-	else if (dstsize != 0)
+	if (s == NULL)
+		s = "(null)";
+	while (*s)
 	{
-		ft_memcpy(dst, src, dstsize - 1);
-		dst[dstsize - 1] = '\0';
+		write(1, s++, 1);
+		(*counter)++;
 	}
-	return (srcsize);
 }

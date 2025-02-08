@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 08:05:26 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/11/16 21:07:38 by mourhouc         ###   ########.fr       */
+/*   Created: 2024/11/22 11:10:27 by mourhouc          #+#    #+#             */
+/*   Updated: 2024/11/26 10:24:13 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putnbr_unsigned(unsigned int n, int *counter)
 {
-	unsigned char	*d_data;
-	unsigned char	*s_data;
-	size_t			i;
+	char	digit;
 
-	i = 0;
-	if (dst == src)
-		return (dst);
-	d_data = (unsigned char *)dst;
-	s_data = (unsigned char *)src;
-	while (i < n)
+	if (n > 9)
 	{
-		d_data[i] = s_data[i];
-		i++;
+		ft_putnbr_unsigned(n / 10, counter);
+		ft_putnbr_unsigned(n % 10, counter);
 	}
-	return (dst);
+	else
+	{
+		digit = n + 48;
+		write (1, &digit, 1);
+		(*counter)++;
+	}
 }

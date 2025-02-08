@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 11:33:55 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/11/08 19:28:29 by mourhouc         ###   ########.fr       */
+/*   Created: 2024/11/21 12:17:34 by mourhouc          #+#    #+#             */
+/*   Updated: 2024/11/23 19:09:12 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putchar(char c, int *counter)
 {
-	char	target;
-	int		i;
-
-	target = (char)c;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == target)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if (target == '\0')
-		return ((char *)&s[i]);
-	return (NULL);
+	write (1, &c, 1);
+	(*counter)++;
 }

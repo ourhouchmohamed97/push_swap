@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:09:25 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/05 17:36:42 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/07 18:43:58 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 #include "libft/libft.h"
 #include "ft_printf/ft_printf.h"
-
 typedef struct s_stack
 {
 	int	*tab;
 	int	len;
+	int	*index;
 }		t_stack;
 
 
@@ -63,8 +63,22 @@ void					rra_silent(t_stack *stack_a);
 void					rrb_silent(t_stack *stack_b);
 
 
-// ************************** MOVES SILENT **************************
-void	sort_two(t_stack *stack_a);
-void	sort_three(t_stack *stack_a);
+// ************************** SORT **************************
+void					sort_two(t_stack *stack_a);
+void					sort_three(t_stack *stack_a);
+void					sort_four(t_stack *stack_a, t_stack *stack_b);
+void					sort_five(t_stack *stack_a, t_stack *stack_b);
+
+
+// ************************** SORT UTILS **************************
+int						find_min(t_stack *stack);
+void					ft_index(t_stack *stack);
+int						ft_compare(t_stack *stack_a, t_stack *stack_b, char c);
+void					ft_sort(t_stack *stack_a, t_stack *stack_b);
+
+
+
+
+
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 12:46:54 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/04 13:09:01 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/06 13:35:18 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	pb(t_stack *stack_a, t_stack *stack_b)
 	}
 	stack_b->tab[0] = stack_a->tab[0];
 	stack_b->len++;
-	stack_a->len--;
+	stack_a->len--;	
 	while (i < stack_a->len)
 	{
 		stack_a->tab[i] = stack_a->tab[i + 1];

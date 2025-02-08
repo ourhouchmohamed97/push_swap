@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:21:51 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/05 19:17:11 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/07 19:30:51 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,16 @@ int main(int argc, char *argv[])
         sort_three(stack_a);
     else if (stack_a->len == 4)
         sort_four(stack_a, stack_b);
-	// free_stack(stack_a, stack_b);
+    else if (stack_a->len == 5)
+        sort_five(stack_a, stack_b);
+    else
+        ft_sort(stack_a, stack_b);
+    // int i = 0;
+    // while (i < stack_a->len)
+    // {
+    //     printf("%d\n", stack_a->tab[i]);
+    //     i++;
+    // }
+	free_stack(stack_a, stack_b);
     return (0);
 }

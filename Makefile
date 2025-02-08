@@ -1,20 +1,21 @@
+NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-RM = rm -f
+RM = rm -rf
 
 SRC = push_swap_utils.c \
 	sort.c \
+	sort_utils.c \
 	stack_parsing.c \
 	stack_parsing_utils.c \
 	moves/swap.c \
 	moves/rotate.c \
 	moves/push.c \
+	chunk_sort.c \
 
 OBJ = $(SRC:.c=.o)
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
-
-NAME = push_swap.a
 
 all: $(NAME)
 
