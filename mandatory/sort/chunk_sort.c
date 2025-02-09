@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:59:15 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/08 12:04:07 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/09 14:11:11 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,12 @@ void	ft_index(t_stack *stack)
     int i, j;
     int min_value;
     int min_index;
-
+	
     if (!stack || !stack->tab || stack->len == 0)
         return;
+	stack->index = malloc(sizeof(int) * stack->len);
+	if (!stack->index)
+		return ;
 	i = 0;
     while (i < stack->len)
     {
@@ -49,48 +52,6 @@ void	ft_index(t_stack *stack)
     }
 }
 
-// // Function to print the values and their assigned indices
-// void print_stack(t_stack *stack)
-// {
-//     for (int i = 0; i < stack->len; i++)
-//     {
-//         printf("Value: %d, Index: %d\n", stack->tab[i], stack->index[i]);
-//     }
-// }
-
-// int main()
-// {
-//     int values[] = {50, 20, 40, 10, 30};
-//     t_stack stack;
-//     stack.len = sizeof(values) / sizeof(values[0]);
-
-//     // Allocate memory for tab and index arrays
-//     stack.tab = malloc(stack.len * sizeof(int));
-//     stack.index = malloc(stack.len * sizeof(int));
-
-//     if (!stack.tab || !stack.index)
-//     {
-//         printf("Memory allocation failed\n");
-//         return 1;
-//     }
-
-//     // Copy values into the stack's tab array
-//     for (int i = 0; i < stack.len; i++)
-//     {
-//         stack.tab[i] = values[i];
-//     }
-//     ft_index(&stack);
-
-//     // Print the stack values with their assigned indices
-//     printf("\nAfter assigning indices:\n");
-//     print_stack(&stack);
-
-//     // Free allocated memory
-//     free(stack.tab);
-//     free(stack.index);
-
-//     return 0;
-// }
 
 int	ft_compare(t_stack *stack_a, t_stack *stack_b, char c)
 {
@@ -116,7 +77,8 @@ void	ft_sort(t_stack *stack_a, t_stack *stack_b)
 
 	min_rang = 0;
 	max_rang = stack_a->len * 0.048 + 10;
-	while (stack_a && !check_sort(stack_a))
+	while (stack_a->len > 0 && !check_sort(stack_a))
+	{
 		if (stack_a->index[stack_a->len - 1] < max_rang && ft_compare(stack_a, NULL, 'a'))
 			rra(stack_a);
 	else if (stack_a->index[0] > max_rang)
@@ -135,5 +97,6 @@ void	ft_sort(t_stack *stack_a, t_stack *stack_b)
 		ft_compare(stack_a, stack_b, 'b');
 		max_rang++;
 		min_rang++;
+	}
 	}
 }

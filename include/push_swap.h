@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:09:25 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/08 12:02:17 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/09 13:11:48 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "../libft_utils/libft/libft.h"
 #include "../libft_utils/printf/ft_printf.h"
+#include <stdio.h>////////////////////
 typedef struct s_stack
 {
 	int	*tab;
@@ -75,6 +76,8 @@ int						find_min(t_stack *stack);
 void					ft_index(t_stack *stack);
 int						ft_compare(t_stack *stack_a, t_stack *stack_b, char c);
 void					ft_sort(t_stack *stack_a, t_stack *stack_b);
+int	ft_find(t_stack *stack_a, int n);
+int	ft_best(t_stack *stack_a);
 
 
 
