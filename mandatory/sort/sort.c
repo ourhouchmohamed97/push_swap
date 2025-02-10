@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:19:36 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/09 12:29:13 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/09 16:15:18 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		find_min(t_stack *stack)
 
 	min = stack->tab[0];
 	i = 1;
-	while (stack->len)
+	while (i < stack->len)
 	{
 		if(stack->tab[i] < min)
 			min = stack->tab[i];
@@ -27,7 +27,6 @@ int		find_min(t_stack *stack)
 	}
 	return (min);
 }
-
 
 void	sort_two(t_stack *stack_a)
 {

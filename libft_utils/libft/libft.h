@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:23:24 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/03 13:04:36 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/10 09:42:48 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ typedef struct s_list
 size_t	ft_strlen(const char *s);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-long		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 char	*ft_strdup(const char *s1);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
+int		ft_isdigit(int c);
+
 
 t_list	*ft_lstnew(int content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

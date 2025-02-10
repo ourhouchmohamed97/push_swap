@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:21:51 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/09 14:11:27 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/09 16:16:57 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ int	ft_find(t_stack *stack_a, int n)
 	}
 	return (-1);
 }
-
+// void ff()
+// {
+//     system("leaks push_swap");
+// }
 int main(int argc, char *argv[])
 {
     t_stack *stack_a;
@@ -76,5 +79,6 @@ int main(int argc, char *argv[])
 			rrb(stack_b);
 	}
 	free_stack(stack_a, stack_b);
+    // atexit(ff);
     return (0);
 }
