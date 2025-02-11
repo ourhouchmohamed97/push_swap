@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:23:24 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 13:14:50 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/11 20:19:46 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char				*ft_strchr(const char *s, int c);
 int					ft_isdigit(int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
-
+// ************************** LIST **************************
 
 t_list				*ft_lstnew(int content);
 void				ft_lstadd_front(t_list **lst, t_list *new);

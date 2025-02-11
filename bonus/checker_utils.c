@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:03:36 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 13:29:20 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/11 20:20:00 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	is_valid_move(char *move)
 			&& (!ft_strncmp(move, "rra\n", 4) || !ft_strncmp(move,
 					"rrb\n", 4) || !ft_strncmp(move, "rrr\n", 4))));
 }
+
 void	clear_content(char *content)
 {
 	free(content);
