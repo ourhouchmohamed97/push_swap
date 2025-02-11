@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 10:53:59 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/09 10:51:14 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:33:34 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	sa(t_stack *stack_a)
 {
 	int	tmp;
-	int index;
-	
+	int	index;
+
 	if (stack_a->len < 2)
 		return ;
 	tmp = stack_a->tab[0];
@@ -31,7 +31,7 @@ void	sa(t_stack *stack_a)
 void	sb(t_stack *stack_b)
 {
 	int	tmp;
-	int index;
+	int	index;
 
 	if (stack_b->len < 2)
 		return ;
@@ -43,11 +43,12 @@ void	sb(t_stack *stack_b)
 	stack_b->index[1] = index;
 	ft_printf("sb\n");
 }
+
 void	sa_silent(t_stack *stack_a)
 {
 	int	tmp;
-	int index;
-	
+	int	index;
+
 	if (stack_a->len < 2)
 		return ;
 	tmp = stack_a->tab[0];
@@ -62,6 +63,7 @@ void	sb_silent(t_stack *stack_b)
 {
 	int	tmp;
 	int	index;
+
 	if (stack_b->len < 2)
 		return ;
 	tmp = stack_b->tab[0];

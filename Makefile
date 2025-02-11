@@ -6,6 +6,7 @@ RM = rm -rf
 MAN_DIR = ./mandatory
 SRC = $(MAN_DIR)/moves/push.c \
 	  $(MAN_DIR)/moves/rotate.c \
+	  $(MAN_DIR)/moves/r_rotate.c \
 	  $(MAN_DIR)/moves/swap.c \
 	  $(MAN_DIR)/parsing/stack_parsing.c \
 	  $(MAN_DIR)/parsing/stack_parsing_utils.c \

@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putaddr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/23 15:16:59 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 11:27:05 by mourhouc         ###   ########.fr       */
+/*   Created: 2025/02/11 13:13:12 by mourhouc          #+#    #+#             */
+/*   Updated: 2025/02/11 13:13:14 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_putaddr(void *ptr, int *counter)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned long	addr;
-	char			*hexa;
+	size_t	i;
 
-	hexa = "0123456789abcdef";
-	addr = (unsigned long)ptr;
-	if (addr >= 16)
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		ft_putaddr((void *)(addr / 16), counter);
-		ft_putaddr((void *)(addr % 16), counter);
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
-	else
-	{
-		write(1, &hexa[addr], 1);
-		(*counter)++;
-	}
+	return (0);
 }

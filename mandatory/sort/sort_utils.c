@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:31:27 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/09 14:12:55 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:19:42 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,12 @@ int	check_sort(t_stack *stack_a)
 	int	i;
 
 	i = 0;
-
-	while(i < stack_a->len - 1)
+	while (i < stack_a->len - 1)
 	{
-		if(stack_a->index[i] != stack_a->index[i+1] - 1)
-			{
-				return (0);
-			}
+		if (stack_a->index[i] != stack_a->index[i + 1] - 1)
+		{
+			return (0);
+		}
 		i++;
 	}
 	return (1);
@@ -68,7 +67,7 @@ int	check_sort(t_stack *stack_a)
 
 int	check_rev_sort(t_stack *stack_a)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i < stack_a->len)

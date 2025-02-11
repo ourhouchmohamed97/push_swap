@@ -10,6 +10,7 @@ SRC = ft_atoi.c \
 	  ft_strlen.c \
 	  ft_strchr.c \
 	  ft_isdigit.c \
+	  ft_strncmp.c \
 	  ft_lstnew_bonus.c \
 	  ft_lstadd_front_bonus.c \
 	  ft_lstsize_bonus.c \
