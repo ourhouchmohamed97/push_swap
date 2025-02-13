@@ -6,13 +6,13 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 20:33:53 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/12/10 20:34:20 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/12 15:08:04 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen_gnl(const char *str)
 {
 	size_t	i;
 
@@ -24,14 +24,14 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strdup(char *str)
+char	*ft_strdup_gnl(const char *str)
 {
 	char	*dest;
 	int		i;
 
 	if (!str)
 		return (NULL);
-	dest = malloc(ft_strlen(str) + 1);
+	dest = malloc(ft_strlen_gnl(str) + 1);
 	if (!dest)
 		return (NULL);
 	i = 0;
@@ -52,10 +52,10 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)
-		return (ft_strdup(s2));
+		return (ft_strdup_gnl(s2));
 	if (!s2)
-		return (ft_strdup(s1));
-	dest = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+		return (ft_strdup_gnl(s1));
+	dest = malloc(ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
 	if (!dest)
 		return (NULL);
 	start = dest;
@@ -67,7 +67,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (start);
 }
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr_gnl(const char *str, int c)
 {
 	if (!str)
 		return (NULL);

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   rest_silent.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 19:09:18 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/12/07 12:57:46 by mourhouc         ###   ########.fr       */
+/*   Created: 2025/02/12 12:49:29 by mourhouc          #+#    #+#             */
+/*   Updated: 2025/02/13 09:38:13 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../../include/push_swap.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
+void	rr_silent(t_stack *stack_a, t_stack *stack_b)
+{
+	ra_silent(stack_a);
+	rb_silent(stack_b);
+}
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-char	*get_next_line(int fd);
-char	*ft_strjoin(char *s1, char *s2);
-char	*ft_strdup(char *str);
-char	*ft_strchr(char *str, int c);
-size_t	ft_strlen(char *str);
-
-#endif
+void	rrr_silent(t_stack *stack_a, t_stack *stack_b)
+{
+	rra_silent(stack_a);
+	rrb_silent(stack_b);
+	ft_printf("rrr\n");
+}

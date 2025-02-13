@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:09:25 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 20:18:31 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/13 09:54:14 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../libft_utils/libft/libft.h"
 # include "../libft_utils/printf/ft_printf.h"
+# include "../libft_utils/get_next_line/get_next_line_bonus.h"
 # include <stdlib.h>
 
 typedef struct s_stack
@@ -63,10 +64,15 @@ void				rrr(t_stack *stack_a, t_stack *stack_b);
 // ************************** MOVES SILENT **************************
 void				sa_silent(t_stack *stack_a);
 void				sb_silent(t_stack *stack_b);
+void				ss_silent(t_stack *stack_a, t_stack *stack_b);
+void				pa_silent(t_stack *stack_a, t_stack *stack_b);
+void				pb_silent(t_stack *stack_a, t_stack *stack_b);
 void				ra_silent(t_stack *stack_a);
 void				rb_silent(t_stack *stack_b);
+void				rr_silent(t_stack *stack_a, t_stack *stack_b);
 void				rra_silent(t_stack *stack_a);
 void				rrb_silent(t_stack *stack_b);
+void				rrr_silent(t_stack *stack_a, t_stack *stack_b);
 
 // ************************** SORT **************************
 void				sort_two(t_stack *stack_a);
@@ -86,7 +92,7 @@ int					find_max(t_stack *stack_a);
 
 // ************************** CHECKER **************************
 void				parse_move(t_stack *a, t_stack *b);
-void				do_op(t_stack *a, t_stack *b, char *instruct);
+void				do_op(t_stack *a, t_stack *b, char *move);
 void				add_list_move(t_move **lst, char *move, t_stack *a,
 						t_stack *b);
 void				apply_move(t_move **lst, t_stack *a, t_stack *b);

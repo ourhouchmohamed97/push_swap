@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 20:39:48 by mourhouc          #+#    #+#             */
-/*   Updated: 2024/12/10 20:42:35 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/12 15:05:43 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char	*fill_buffer(char *save_buffer, int fd)
 			return (free(buffer), free(save_buffer), NULL);
 		free(save_buffer);
 		save_buffer = temp;
-		if (ft_strchr(buffer, '\n'))
+		if (ft_strchr_gnl(buffer, '\n'))
 			break ;
 	}
 	free(buffer);
@@ -80,7 +80,7 @@ static char	*clean_line(char *save_buffer)
 		free(save_buffer);
 		return (NULL);
 	}
-	new_buffer = malloc(ft_strlen(save_buffer) - i);
+	new_buffer = malloc(ft_strlen_gnl(save_buffer) - i);
 	if (!new_buffer)
 		return (free(save_buffer), NULL);
 	i++;
