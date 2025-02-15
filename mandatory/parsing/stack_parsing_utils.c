@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 21:13:14 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 11:32:53 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:16:46 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	handle_error(t_list **lst_tab)
 {
 	ft_lstclear(lst_tab, delete_content);
 	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	exit(1);
 }
 
 void	arg_is_valid(char *arg, t_list **lst_tab)

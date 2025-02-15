@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:31:27 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 09:19:42 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:18:48 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	handle_error_stack(t_stack *stack_a, t_stack *stack_b)
 		free(stack_b->tab);
 		free(stack_b);
 	}
-	exit(EXIT_FAILURE);
+	exit(1);
 }
 
 void	init_stack_b(t_stack *stack_a, t_stack **stack_b)
@@ -57,9 +57,7 @@ int	check_sort(t_stack *stack_a)
 	while (i < stack_a->len - 1)
 	{
 		if (stack_a->index[i] != stack_a->index[i + 1] - 1)
-		{
 			return (0);
-		}
 		i++;
 	}
 	return (1);
