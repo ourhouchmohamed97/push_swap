@@ -6,14 +6,13 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 19:13:19 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/13 09:53:22 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/16 17:30:46 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-# include "../libft/libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>

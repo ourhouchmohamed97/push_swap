@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:59:15 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/11 11:24:36 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/16 18:59:21 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ void	ft_index(t_stack *stack)
 	}
 }
 
-int	ft_compare(t_stack *stack_a, t_stack *stack_b, char c)
+int	complete(t_stack *stack_a, t_stack *stack_b, char c)
 {
 	if (c == 'a' && stack_a->len > 1
 		&& stack_a->index[0] > stack_a->index[stack_a->len - 1])
 		return (1);
 	if (c == 'b')
 	{
-		if (ft_compare(stack_a, NULL, 'a'))
+		if (complete(stack_a, NULL, 'a'))
 			rra(stack_a);
 		pb(stack_a, stack_b);
 		if (stack_b->len > 1 && stack_b->index[0] < stack_b->index[1])
@@ -63,7 +63,7 @@ void	ft_sort(t_stack *stack_a, t_stack *stack_b)
 	min_rang = ((max_rang = stack_a->len * 0.048 + 10), 0);
 	while (stack_a->len > 0 && !check_sort(stack_a))
 	{
-		if (stack_a->index[stack_a->len - 1] < max_rang && ft_compare(stack_a,
+		if (stack_a->index[stack_a->len - 1] < max_rang && complete(stack_a,
 				NULL, 'a'))
 			rra(stack_a);
 		else if (stack_a->index[0] > max_rang)
@@ -71,15 +71,15 @@ void	ft_sort(t_stack *stack_a, t_stack *stack_b)
 		else if (stack_a->index[0] < min_rang)
 		{
 			pb(stack_a, stack_b);
+			min_rang = ((max_rang++), min_rang + 1);
 			if (stack_a->index[0] > max_rang)
 				rr(stack_a, stack_b);
 			else
 				rb(stack_b);
-			min_rang = ((max_rang++), min_rang + 1);
 		}
 		else
 		{
-			ft_compare(stack_a, stack_b, 'b');
+			complete(stack_a, stack_b, 'b');
 			max_rang++;
 			min_rang++;
 		}

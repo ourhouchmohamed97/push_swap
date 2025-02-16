@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 20:04:53 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/12 15:55:18 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/16 19:00:15 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_move	*ft_lstnew_move(char *content)
 {
-	t_move	*res;
+	t_move	*new;
 
-	res = (t_move *)malloc(sizeof(t_move));
-	if (!res)
+	new = (t_move *)malloc(sizeof(t_move));
+	if (!new)
 		return (NULL);
-	res->move = content;
-	res->next = NULL;
-	return (res);
+	new->move = content;
+	new->next = NULL;
+	return (new);
 }
 
 void	ft_lstadd_back_move(t_move **lst, t_move *new)

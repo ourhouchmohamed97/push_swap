@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:09:25 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/13 09:54:14 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/16 19:00:03 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void				sort_five(t_stack *stack_a, t_stack *stack_b);
 // ************************** SORT UTILS **************************
 int					find_min(t_stack *stack);
 void				ft_index(t_stack *stack);
-int					ft_compare(t_stack *stack_a, t_stack *stack_b, char c);
+int					complete(t_stack *stack_a, t_stack *stack_b, char c);
 void				ft_sort(t_stack *stack_a, t_stack *stack_b);
 int					find_position(t_stack *stack_a, int n);
 int					find_max(t_stack *stack_a);

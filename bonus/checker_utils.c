@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:03:36 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/12 16:26:27 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/16 13:07:35 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	handle_error_move(t_move **lst, t_stack *a, t_stack *b)
 	ft_lstclear_move(lst, &clear_content);
 	free_stack(a, b);
 	write(2, "Error\n", 6);
-	exit(EXIT_FAILURE);
+	exit(1);
 }

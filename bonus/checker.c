@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 18:46:35 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/13 09:54:34 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/16 18:13:55 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	do_op(t_stack *a, t_stack *b, char *move)
 	if (ft_strncmp(move, "rra", 3) == 0)
 		rra_silent(a);
 	else if (ft_strncmp(move, "rrb", 3) == 0)
-		rrb_silent(a);
+		rrb_silent(b);
 	else if (ft_strncmp(move, "rrr", 3) == 0)
 		rrr_silent(a, b);
 	else if (ft_strncmp(move, "ra", 2) == 0)

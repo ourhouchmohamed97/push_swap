@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 12:46:54 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/12 12:49:17 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:30:50 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_stack *stack_a, t_stack *stack_b)
 	int	i;
 
 	i = stack_a->len;
-	if (stack_a->len == 0)
+	if (stack_b->len == 0)
 		return ;
 	while (i > 0)
 	{
@@ -43,7 +43,7 @@ void	pa_silent(t_stack *stack_a, t_stack *stack_b)
 	int	i;
 
 	i = stack_a->len;
-	if (stack_a->len == 0)
+	if (stack_b->len == 0)
 		return ;
 	while (i > 0)
 	{
