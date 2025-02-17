@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 20:39:48 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/12 15:05:43 by mourhouc         ###   ########.fr       */
+/*   Created: 2024/12/01 19:09:53 by mourhouc          #+#    #+#             */
+/*   Updated: 2025/02/17 09:26:18 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 static char	*fill_buffer(char *save_buffer, int fd)
 {
@@ -93,17 +93,17 @@ static char	*clean_line(char *save_buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	*save_buffer[OPEN_MAX];
+	static char	*save_buffer;
 	char		*buffer;
 
 	if (fd > OPEN_MAX || BUFFER_SIZE <= 0 || fd < 0 || read(fd, NULL, 0) < 0)
-		return (free(save_buffer[fd]), save_buffer[fd] = NULL);
-	save_buffer[fd] = fill_buffer(save_buffer[fd], fd);
-	if (!save_buffer[fd] || *save_buffer[fd] == 0)
-		return (free(save_buffer[fd]), save_buffer[fd] = NULL);
-	buffer = set_line(save_buffer[fd]);
+		return (free(save_buffer), save_buffer = NULL);
+	save_buffer = fill_buffer(save_buffer, fd);
+	if (!save_buffer || *save_buffer == 0)
+		return (free(save_buffer), save_buffer = NULL);
+	buffer = set_line(save_buffer);
 	if (!buffer)
-		return (free(save_buffer[fd]), save_buffer[fd] = NULL);
-	save_buffer[fd] = clean_line(save_buffer[fd]);
+		return (free(save_buffer), save_buffer = NULL);
+	save_buffer = clean_line(save_buffer);
 	return (buffer);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 20:33:53 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/12 15:08:04 by mourhouc         ###   ########.fr       */
+/*   Created: 2024/12/05 09:58:07 by mourhouc          #+#    #+#             */
+/*   Updated: 2025/02/17 09:25:43 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
-size_t	ft_strlen_gnl(const char *str)
+size_t	ft_strlen_gnl(char *str)
 {
 	size_t	i;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen_gnl(const char *str)
 	return (i);
 }
 
-char	*ft_strdup_gnl(const char *str)
+char	*ft_strdup_gnl(char *str)
 {
 	char	*dest;
 	int		i;
@@ -67,7 +67,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (start);
 }
 
-char	*ft_strchr_gnl(const char *str, int c)
+char	*ft_strchr_gnl(char *str, int c)
 {
 	if (!str)
 		return (NULL);

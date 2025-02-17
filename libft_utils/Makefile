@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-DEPS = ./libft/libft.h ./printf/ft_printf.h ./get_next_line/get_next_line_bonus.h
+DEPS = ./libft/libft.h ./printf/ft_printf.h ./get_next_line/get_next_line.h
 
 LIBFT_SRCS = ./libft/ft_atoi.c \
 	  ./libft/ft_memcpy.c \
@@ -29,8 +29,8 @@ PRINTF_SRCS = ./printf/ft_printf.c \
 		./printf/ft_putaddr.c \
 		./printf/ft_putnbr_unsigned.c \
 
-GNL_SRCS = ./get_next_line/get_next_line_bonus.c \
-		./get_next_line/get_next_line_utils_bonus.c \
+GNL_SRCS = ./get_next_line/get_next_line.c \
+		./get_next_line/get_next_line_utils.c \
 
 SRC = $(LIBFT_SRCS) $(PRINTF_SRCS) $(GNL_SRCS)
 

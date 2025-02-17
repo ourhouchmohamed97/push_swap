@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_list.c                                     :+:      :+:    :+:   */
+/*   checker_list_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 20:04:53 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/16 19:00:15 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/17 08:31:46 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/checker.h"
 
 t_move	*ft_lstnew_move(char *content)
 {

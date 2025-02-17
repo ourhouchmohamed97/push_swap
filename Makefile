@@ -5,7 +5,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
-DEPS = ./include/push_swap.h \
+DEPS = ./include/push_swap.h
+DEPS_BONUS = ./include/checker.h
 
 MAN_DIR = ./mandatory
 SRC = $(MAN_DIR)/moves/push.c \
@@ -52,7 +53,7 @@ $(LIBFT):
 
 bonus: $(NAME_BONUS)
 
-$(NAME_BONUS): $(OBJ_BONUS) $(LIBFT) $(DEPS)
+$(NAME_BONUS): $(OBJ_BONUS) $(LIBFT) $(DEPS_BONUS)
 	$(CC) $(CFLAGS) $(OBJ_BONUS) $(LIBFT) -o $(NAME_BONUS)
 
 clean:

@@ -4,6 +4,7 @@
 		"push_swap.h": "c",
 		"ft_printf.h": "c",
 		"stdio.h": "c",
-		"limits.h": "c"
+		"limits.h": "c",
+		"checker.h": "c"
 	}
 }
