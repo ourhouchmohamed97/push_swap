@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 08:25:05 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/17 09:33:05 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:26:40 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "../libft_utils/printf/ft_printf.h"
 # include "../libft_utils/get_next_line/get_next_line.h"
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
@@ -49,7 +50,6 @@ void				ft_index(t_stack *stack);
 int					check_sort(t_stack *stack_a);
 void				init_stack_b(t_stack *stack_a, t_stack **stack_b);
 void				free_stack(t_stack *stack_a, t_stack *stack_b);
-
 
 // ************************** CHECKER LIST **************************
 t_move				*ft_lstnew_move(char *content);

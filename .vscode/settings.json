@@ -5,6 +5,7 @@
 		"ft_printf.h": "c",
 		"stdio.h": "c",
 		"limits.h": "c",
-		"checker.h": "c"
+		"checker.h": "c",
+		"stdlib.h": "c"
 	}
 }

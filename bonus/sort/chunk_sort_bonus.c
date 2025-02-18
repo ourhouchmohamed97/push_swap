@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chunk_sort.c                                       :+:      :+:    :+:   */
+/*   chunk_sort_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:59:15 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/16 18:59:21 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:16:59 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
-#include <limits.h>
 
 void	ft_index(t_stack *stack)
 {
@@ -30,7 +29,7 @@ void	ft_index(t_stack *stack)
 		min_value = ((min_index = -1, j = 0), INT_MAX);
 		while (j < stack->len)
 		{
-			if (stack->index[j] == -1 && stack->tab[j] < min_value)
+			if (stack->index[j] == -1 && stack->tab[j] <= min_value)
 			{
 				min_value = stack->tab[j];
 				min_index = j;

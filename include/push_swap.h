@@ -6,7 +6,7 @@
 /*   By: mourhouc <mourhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:09:25 by mourhouc          #+#    #+#             */
-/*   Updated: 2025/02/17 09:15:00 by mourhouc         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:26:34 by mourhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../libft_utils/libft/libft.h"
 # include "../libft_utils/printf/ft_printf.h"
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
@@ -80,6 +81,5 @@ int					complete(t_stack *stack_a, t_stack *stack_b, char c);
 void				ft_sort(t_stack *stack_a, t_stack *stack_b);
 int					find_position(t_stack *stack_a, int n);
 int					find_max(t_stack *stack_a);
-
 
 #endif
